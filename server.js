@@ -12,6 +12,10 @@ app.use(cors());
 app.use(requestIp.mw());
 app.use('/api/hello', helloRoute);
 
+app.use((req, res) => {
+    res.status(404).json({ error: 'Ooops that endpoint is not defined try /api/hello' });
+});
+
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });

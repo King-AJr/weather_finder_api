@@ -38,17 +38,20 @@ To get a local copy of the project up and running, follow these steps:
 project/
 │
 ├── .env
-├── app.js
+├── server.js
 ├── routes/
 │   └── hello.js
 ├── services/
 │   └── weatherService.js
+├── controllers/
+    └── helloController.js
 └── utils/
     └── ipUtils.js
 ```
 
 - **server.js**: Main entry point of the application.
 - **routes/hello.js**: Defines the `/api/hello` endpoint.
+- **controllers/helloController.js**: Contains the function to handle the request made to `/api/hello` endpoint.
 - **services/weatherService.js**: Contains the function to fetch weather data from the Tomorrow.io API.
 - **utils/ipUtils.js**: Contains the function to lookup IP address information.
 
