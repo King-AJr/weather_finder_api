@@ -8,8 +8,7 @@ router.get('/', async (req, res) => {
     let visitor_name = req.query.visitor_name || 'mark';
     visitor_name = visitor_name.replace(/^"(.*)"$/, '$1');
 
-    const ip = "41.58.153.96"
-    // const ip = req.clientIp;
+    const ip = req.clientIp;
 
     try {
         const user_info = lookupIp(ip);
